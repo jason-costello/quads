@@ -1,0 +1,134 @@
+defaults nosave
+
+
+# version
+# Betaflight / STM32F411 (S411) 4.4.1 Apr 10 2023 / 21:28:01 (e43d591b2) MSP API: 1.45
+
+# config: YES
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name BETAFPVF411
+manufacturer_id BEFH
+mcu_id 005b004e3535510436323431
+signature 
+
+# name: Yo Mamma's Drone
+
+# feature
+feature -TELEMETRY
+feature -AIRMODE
+feature GPS
+
+# serial
+serial 1 8192 115200 57600 0 115200
+serial 30 2 115200 57600 0 115200
+serial 31 2 115200 57600 0 115200
+
+# aux
+aux 0 0 0 900 1800 0 0
+aux 1 35 255 1900 2100 0 0
+
+# master
+set dyn_notch_count = 2
+set dyn_notch_min_hz = 125
+set dyn_notch_max_hz = 850
+set acc_lpf_hz = 10
+set acc_calibration = 82,73,-114,1
+set fpv_mix_degrees = 30
+set dshot_idle_value = 550
+set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT300
+set motor_output_reordering = 3,0,2,1,4,5,6,7
+set align_board_yaw = -45
+set small_angle = 35
+set gps_sbas_mode = WAAS
+set gps_auto_baud = ON
+set gps_ublox_use_galileo = ON
+set osd_units = IMPERIAL
+set osd_warn_bitmask = 24575
+set osd_rssi_alarm = 0
+set osd_cap_alarm = 0
+set osd_alt_alarm = 0
+set osd_vbat_pos = 14359
+set osd_rssi_pos = 14342
+set osd_link_tx_power_pos = 87
+set osd_flymode_pos = 14562
+set osd_g_force_pos = 14679
+set osd_vtx_channel_pos = 363
+set osd_crosshairs_pos = 14541
+set osd_ah_sbar_pos = 14542
+set osd_ah_pos = 14414
+set osd_gps_speed_pos = 14498
+set osd_gps_sats_pos = 14336
+set osd_home_dir_pos = 2059
+set osd_home_dist_pos = 2060
+set osd_compass_bar_pos = 2122
+set osd_altitude_pos = 30903
+set osd_power_pos = 14401
+set osd_battery_usage_pos = 14376
+set osd_disarmed_pos = 14507
+set osd_nheading_pos = 2093
+set osd_flip_arrow_pos = 14574
+set osd_stat_bitmask = 2377756
+set osd_canvas_width = 30
+set osd_canvas_height = 13
+set gyro_1_sensor_align = CW180FLIP
+set gyro_1_align_pitch = 1800
+set rpm_filter_harmonics = 2
+set craft_name = Yo Mamma's Drone
+set pilot_name = Comrade Colin
+
+profile 0
+
+# profile 0
+set dterm_lpf1_dyn_min_hz = 90
+set dterm_lpf1_dyn_max_hz = 180
+set dterm_lpf1_static_hz = 90
+set dterm_lpf2_static_hz = 180
+set pidsum_limit = 1000
+set pidsum_limit_yaw = 1000
+set yaw_lowpass_hz = 0
+set p_pitch = 70
+set i_pitch = 126
+set d_pitch = 45
+set f_pitch = 187
+set p_roll = 67
+set i_roll = 120
+set f_roll = 180
+set p_yaw = 67
+set i_yaw = 120
+set f_yaw = 180
+set d_min_roll = 40
+set d_min_pitch = 45
+set dyn_idle_min_rpm = 35
+set simplified_master_multiplier = 150
+set simplified_d_gain = 90
+set simplified_dmax_gain = 0
+set simplified_dterm_filter_multiplier = 120
+
+profile 1
+
+profile 2
+
+profile 3
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
